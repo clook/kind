@@ -145,6 +145,9 @@ type Node struct {
 	// The node-level patches will be applied after the cluster-level patches
 	// have been applied. (See Cluster.KubeadmConfigPatchesJSON6902)
 	KubeadmConfigPatchesJSON6902 []PatchJSON6902 `yaml:"kubeadmConfigPatchesJSON6902,omitempty"`
+
+	// ExtraArgs describes additional flags for the node container
+	ExtraArgs []string `yaml:"extraArgs,omitempty"`
 }
 
 // NodeRole defines possible role for nodes in a Kubernetes cluster managed by `kind`
